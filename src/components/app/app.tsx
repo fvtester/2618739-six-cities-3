@@ -1,10 +1,14 @@
 import Main from '../../pages/main/main';
-
+import Header from '../header';
 type MainPageProps = {
-    rentCount: number;
+  rentCount: number;
 }
 
 function App({ rentCount }: MainPageProps): JSX.Element {
-  return (<Main rentCount={rentCount} />);
+  return (
+    <div className="page page--gray page--main">
+      <Header />
+      <Main rentCount={rentCount} />
+    </div>);
 }
 export default App;
